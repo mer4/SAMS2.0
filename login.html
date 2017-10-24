@@ -1,0 +1,97 @@
+<!DOCTYPE html5>
+
+
+
+
+
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <h1>
+            Login here.
+        </h1>
+        <form action = "../php/login.php" method = "POST" name = "loginForm" onsubmit = "return loginValidation()">
+            <table cellpadding="10">
+                
+                <tr>
+                    <td>E-mail address</td>
+                    <td><input type = "email" name = "email" placeholder = "E-mail address" required></td>
+                    <td>
+                        <span style="color:red;"  id = "email_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td> <input type = "Password" name = "pass" placeholder = "Password" required></td>    
+                    <td>
+                        <span style="color:red;"  id = "pass_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "submit" value="Login" name = "login">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+        <h3>Not a user? <a href="register.html">Register here</a></h3>
+    </body>
+</html>
+
+
+<script type= "text/javascript">
+    
+    var email = document.forms["loginForm"]["email"];
+    var pass = document.forms["loginForm"]["pass"];
+    
+    var email_error =  document.getElementById("email_error");
+    var pass_error = document.getElementById("pass_error");
+    
+    email.addEventListener("blur", emailVerify, true);
+    pass.addEventListener("blur", passVerify, true);
+    
+    
+    
+/////////////////////////Checking for errors.  
+    function loginValidation() {
+        
+        var temp = true;    
+
+        if (email.value == "") {
+            email_error.textContent = "Enter valid email.";
+            email.focus();
+            temp = false;
+        }
+        
+        if (pass.value == "") {
+            pass_error.textContent = "Enter valid password.";
+            pass.focus();
+            temp = false;
+        }
+        return temp;
+    }
+    
+/////////////////////////Checing for on blur and restoring span
+    
+    function emailVerify() {
+        
+        if (email.value != "") {
+            email_error.innerHTML = "";
+            return true;
+        }
+    }
+    
+    function passVerify() {
+         if (pass.value != "") {
+            pass_error.innerHTML = "";
+            return true;
+        }
+    }
+    
+    
+    
+</script>
