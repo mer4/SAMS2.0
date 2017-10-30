@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Swim </title>
+    </head>
+    
+    <body>
+        <h1>Swim Page</h1>
+        
+       <table>
+            <form name = "swim_form" method = "POST" action = "../php/swim.php" onsubmit = "return swimValidation()"> 
+                <tr>
+                    <td>
+                        Enter your swim qualifying time:
+                    </td>
+                    <td>
+                        <input type = "text" name = "swim_time" placeholder = "mm:ss.ss"  pattern = "([0-5][0-9])(:[0-5][0-9])(.[0-9][0-9])" title = "Enter in this format: mm:ss.ss" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "submit" name = "swim_submit">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>
