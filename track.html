@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Track </title>
+    </head>
+    
+    <body>
+        <h1>Track Page</h1>
+        <table>
+            <form name = "track_form" method = "POST" action = "../php/track.php" onsubmit = "return trackValidation()"> 
+                <tr>
+                    <td>
+                        Enter your track qualifying time:
+                    </td>
+                    <td>
+                        <input type = "text" name = "track_time" placeholder = "mm:ss.ss"  pattern = "([0-5][0-9])(:[0-5][0-9])(.[0-9][0-9])" title = "Enter in this format:" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type = "submit" name = "track_submit">
+                    </td>
+                </tr>
+            </form>
+        </table>
+        
+    </body>
+</html>
