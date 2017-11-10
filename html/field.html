@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Field </title>
+    </head>
+    
+    <body>
+        <h1>Field Page</h1>
+        
+        <table>
+            <form name = "field_form" method = "POST" action = "../php/field.php" onsubmit = "return fieldValidation()"> 
+                <tr>
+                    <td>
+                        Enter your field qualifying time:
+                    </td>
+                    <td>
+                        <input type = "text" name = "field_time" placeholder = "mm:ss.ss"  pattern = "([0-5][0-9])(:[0-5][0-9])(.[0-9][0-9])" title = "Enter in this format: mm:ss.ss" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type = "submit" name = "field_submit">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>
