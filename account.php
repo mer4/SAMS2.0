@@ -1,7 +1,8 @@
 <?php
 
-$hostname = ""     ; 			// or "sql2.njit.edu"   OR "SQL1.NJIT.EDU"
-$username = "" ;
-$project  = "" ;
-$password = "" ;
+$hostname = "sql2.njit.edu";
+$username = "mer4";
+$project  = "mer4";
+$password = "2kXQOxHZC";
+
 ?>
