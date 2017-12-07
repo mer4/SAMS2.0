@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql2.njit.edu
--- Generation Time: Dec 02, 2017 at 04:36 AM
+-- Generation Time: Dec 06, 2017 at 07:05 AM
 -- Server version: 5.5.29-log
 -- PHP Version: 5.6.24
 
@@ -36,34 +36,34 @@ CREATE TABLE IF NOT EXISTS `Athlete Registration Form` (
   `DSO` varchar(50) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `Cell Phone` varchar(15) DEFAULT NULL,
-  `Age` int(10) unsigned NOT NULL,
+  `Age` int(3) unsigned NOT NULL,
   `DOB` date NOT NULL COMMENT 'YYYY-MM-DD',
   `Gender` varchar(10) NOT NULL,
   `Address2` varchar(50) DEFAULT NULL,
   `T-Shirt Size` varchar(30) NOT NULL,
   `City` varchar(50) NOT NULL,
-  `State Providence` varchar(50) DEFAULT NULL,
-  `Zip Mail Code` int(11) NOT NULL,
-  `Country` int(11) NOT NULL,
-  `Email Address` int(11) NOT NULL,
-  `Email Sent` int(11) NOT NULL,
+  `State/Providence` varchar(50) DEFAULT NULL,
+  `Zip/Mail Code` int(5) unsigned DEFAULT NULL,
+  `Country` varchar(30) NOT NULL,
+  `Email Address` varchar(50) DEFAULT NULL,
+  `Email Sent` varchar(3) DEFAULT NULL,
   `Membership Number` int(11) NOT NULL,
   `Registration Number` int(11) NOT NULL,
   `BIB Number` int(11) NOT NULL,
-  `Age Div` int(11) NOT NULL,
-  `Team Name` int(11) NOT NULL,
-  `Head Coach's Name` int(11) NOT NULL,
-  `Email Coach` int(11) NOT NULL,
-  `Coach's Home Phone` int(11) NOT NULL,
-  `Work Phone Coach` int(11) NOT NULL,
-  `Coach coming to meet` int(11) NOT NULL,
-  `Needs to be classified` int(11) NOT NULL,
-  `Shuttle Arrive` int(11) NOT NULL,
-  `Classification Site` int(11) NOT NULL,
-  `Classification by Whom` int(11) NOT NULL,
-  `Sanctioned Meet` int(11) NOT NULL,
-  `Certification Due` int(11) NOT NULL,
-  `Shuttle From` int(11) NOT NULL
+  `Age Division` varchar(5) NOT NULL,
+  `Team Name` varchar(30) NOT NULL,
+  `Head Coach's Name` varchar(50) NOT NULL,
+  `Coach's Email` varchar(30) DEFAULT NULL,
+  `Coach's Home Phone` varchar(15) NOT NULL,
+  `Coach's Work Phone` varchar(15) DEFAULT NULL,
+  `Coach coming to meet` varchar(3) NOT NULL,
+  `Needs to be classified` varchar(3) NOT NULL,
+  `Shuttle Arrival` varchar(5) NOT NULL,
+  `Classification Site` varchar(15) NOT NULL,
+  `Classification by Whom` varchar(15) NOT NULL,
+  `Sanctioned Meet` varchar(3) NOT NULL,
+  `Certification Due` date NOT NULL,
+  `Shuttle From` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
